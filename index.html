@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harigovind C M | Professional Portfolio</title>
+<style>
+:root {
+  --bg: #080d16;
+  --panel: #111b2a;
+  --gold: #d6b779;
+  --white: #f4f5f7;
+  --muted: #a6b0bf;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+nav {
+  position: sticky; top: 0; z-index: 10;
+  background: #080d16ed;
+  border-bottom: 1px solid #263447;
+  padding: 16px 7%;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.logo { color: var(--gold); font-weight: bold; letter-spacing: 2px; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 17px; font-size: 13px; }
+nav a:hover { color: var(--gold); }
+section { padding: 75px 9%; scroll-margin-top: 65px; }
+.hero {
+  min-height: 550px;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(ellipse at 85% 30%, #243751 0%, transparent 55%);
+}
+.eyebrow { color: var(--gold); letter-spacing: 4px; font-size: 12px; }
+h1 { font-size: clamp(38px, 7vw, 70px); line-height: 1.12; margin: 17px 0; }
+h1 span, h2 span { color: var(--gold); }
+.hero p { color: var(--muted); max-width: 650px; }
+.btn {
+  display: inline-block; margin-top: 27px;
+  padding: 12px 22px; border: 1px solid var(--gold);
+  color: var(--gold); text-decoration: none;
+  border-radius: 5px; margin-right: 10px;
+}
+.btn:hover { background: var(--gold); color: var(--bg); }
+h2 { font-size: 32px; margin-bottom: 25px; }
+.intro { max-width: 800px; color: var(--muted); }
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 17px; margin-top: 25px;
+}
+.card {
+  background: var(--panel); border: 1px solid #263447;
+  padding: 23px; border-radius: 9px;
+}
+.card h3 { color: var(--gold); margin-bottom: 10px; font-size: 17px; }
+.card p, .card li { color: var(--muted); font-size: 14px; }
+.card ul { padding-left: 18px; }
+.tag {
+  display: inline-block; padding: 7px 12px; margin: 5px;
+  border: 1px solid #344459; border-radius: 20px;
+  color: var(--muted); font-size: 13px;
+}
+.timeline { border-left: 2px solid var(--gold); padding-left: 23px; }
+.timeline .card { margin-bottom: 17px; }
+.contact { text-align: center; background: #101a29; }
+.contact a { color: var(--gold); text-decoration: none; }
+footer {
+  text-align: center; padding: 25px;
+  color: var(--muted); font-size: 12px;
+  border-top: 1px solid #263447;
+}
+@media(max-width:600px) {
+  nav { padding: 14px 5%; }
+  nav div:last-child { display: flex; flex-wrap: wrap; gap: 10px; }
+  nav a { margin: 0; }
+  section { padding: 55px 7%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">HARIGOVIND C M</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">WELCOME TO MY PROFESSIONAL PORTFOLIO</div>
+  <h1>HARIGOVIND<br><span>C M</span></h1>
+  <p>
+    Dedicated professional with a background in Information Technology,
+    technical support, cybersecurity, software configuration and
+    administration. Passionate about learning, solving problems and
+    creating opportunities through continuous growth.
+  </p>
+  <div>
+    <a class="btn" href="#about">Explore My Profile</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About <span>Me</span></h2>
+  <p class="intro">
+    I am a hardworking, responsible and adaptable professional who believes
+    in continuous improvement. My background combines technical knowledge,
+    administrative experience and a strong interest in cybersecurity.
+    I enjoy taking on new challenges, learning new technologies and
+    working collaboratively to achieve organisational goals.
+    <br><br>
+    My professional approach is built on dedication, honesty, teamwork,
+    problem-solving and the willingness to give my best to every
+    responsibility entrusted to me.
+  </p>
+</section>
+
+<section id="experience">
+  <h2>Work <span>Experience</span></h2>
+  <div class="timeline">
+    <div class="card">
+      <h3>Support Specialist</h3>
+      <p><strong>Technical Support & IT Operations</strong></p>
+      <ul>
+        <li>Provided hardware, software and operating system support.</li>
+        <li>Installed and configured systems and applications.</li>
+        <li>Assisted with server installation and troubleshooting.</li>
+        <li>Maintained technical documentation and user support records.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Admin Engineer</h3>
+      <p><strong>NDimensionZ Pvt. Ltd.</strong></p>
+      <ul>
+        <li>Coordinated administrative and technical operations.</li>
+        <li>Prepared reports and maintained company documentation.</li>
+        <li>Coordinated with teams, clients and vendors.</li>
+        <li>Supported project activities and daily operations.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Administrative Officer</h3>
+      <p><strong>Meera Tech Cont.</strong></p>
+      <ul>
+        <li>Managed daily office operations and documentation.</li>
+        <li>Handled customer enquiries and correspondence.</li>
+        <li>Coordinated with clients, suppliers and subcontractors.</li>
+        <li>Maintained records, quotations and business documents.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>ELV Programming & Technical Work</h3>
+      <p><strong>System Configuration</strong></p>
+      <ul>
+        <li>Worked with CCTV and intercom system configuration.</li>
+        <li>Programmed and configured related software.</li>
+        <li>Assisted with system setup and technical troubleshooting.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>My <span>Skill Set</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Technical Skills</h3>
+      <p>IT Support · Programming · Software Configuration ·
+      Hardware Troubleshooting · Server Installation ·
+      Networking Fundamentals</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity</h3>
+      <p>CEH Fundamentals · Vulnerability Assessment ·
+      Kali Linux · Burp Suite · Splunk · Web Application Security</p>
+    </div>
+    <div class="card">
+      <h3>Administrative Skills</h3>
+      <p>Office Coordination · Documentation ·
+      Customer Support · Reporting · Operations Management</p>
+    </div>
+    <div class="card">
+      <h3>Personal Strengths</h3>
+      <p>Hardworking · Problem-Solving · Teamwork ·
+      Communication · Adaptability · Time Management ·
+      Quick Learning</p>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications & <span>Qualifications</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>CEH</h3>
+      <p>Certified Ethical Hacker</p>
+    </div>
+    <div class="card">
+      <h3>CICSA</h3>
+      <p>Certified IT Infrastructure & Cyber SOC Analyst</p>
+      <p>September 2023</p>
+    </div>
+  </div>
+  <h3 style="color:var(--gold);margin-top:30px">Languages</h3>
+  <p class="intro">English · Hindi · Malayalam · Tamil</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Connect</h2>
+  <p class="intro" style="margin:auto">
+    I am open to new opportunities, professional challenges and
+    meaningful collaborations. I would welcome the opportunity
+    to contribute to your organisation and grow together.
+  </p>
+  <p style="margin-top:20px">
+    <strong>Email:</strong>
+    <a href="mailto:Harigovindcmanoj450@gmail.com">
+      Harigovindcmanoj450@gmail.com
+    <br><br>
+<strong>Phone:</strong>
+<a href="tel:+918075799628">
+  +91 8075799628
+    </a>
+  </p>
+  <p><strong>Location:</strong> Thrissur, Kerala, India</p>
+</section>
+
+<footer>
+  © 2026 Harigovind C M · Professional Portfolio
+</footer>
+</body>
+</html>
