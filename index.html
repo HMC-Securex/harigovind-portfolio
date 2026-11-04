@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Professional portfolio of Harigovind C M - IT, Technical Support, Cybersecurity and Administration.">
+<title>Harigovind C M | Professional Portfolio</title>
+
+<style>
+:root {
+  --bg: #080b12;
+  --surface: #111824;
+  --surface2: #172233;
+  --gold: #d9b875;
+  --white: #f6f7fa;
+  --muted: #a6b0bf;
+  --border: #283449;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,18,.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(15px);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand {
+  color: var(--gold);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+nav a:hover { color: var(--gold); }
+
+.hero {
+  padding: 90px 0;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 30%, #263b54 0%, transparent 38%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 1.08;
+  margin: 18px 0;
+  letter-spacing: -2px;
+}
+
+.gold { color: var(--gold); }
+
+.hero h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #dce3ed;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 610px;
+}
+
+.profile-frame {
+  width: 100%;
+  max-width: 330px;
+  justify-self: center;
+  border: 1px solid var(--gold);
+  border-radius: 18px;
+  padding: 9px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px #0008;
+}
+
+.profile-frame img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 11px 20px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: #10131a;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--gold);
+  color: #10131a;
+}
+
+section {
+  padding: 85px 0;
+  scroll-margin-top: 75px;
+}
+
+.section-label {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: clamp(29px, 4vw, 40px);
+  margin: 8px 0 28px;
+  line-height: 1.2;
+}
+
+.about-text {
+  max-width: 850px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 12px;
+  transition: .2s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card .date {
+  color: var(--gold);
+  font-size: 12px;
+  margin: 7px 0 13px;
+}
+
+.card p, .card li {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card ul {
+  padding-left: 19px;
+  margin-top: 12px;
+}
+
+.card li { margin-bottom: 6px; }
+
+.company {
+  color: #e5e9f0 !important;
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.skill-card h3 {
+  color: var(--gold);
+  font-size: 16px;
+  margin-bottom: 13px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 4px 2px;
+  color: #d3dae5;
+}
+
+.education {
+  border-left: 2px solid var(--gold);
+  padding-left: 22px;
+}
+
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.cert-card img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+}
+
+.cert-card h3 {
+  color: var(--gold);
+  margin-bottom: 7px;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact {
+  text-align: center;
+  background: #101a29;
+}
+
+.contact-box {
+  max-width: 650px;
+  margin: auto;
+}
+
+.contact-box p {
+  color: var(--muted);
+  margin: 10px 0;
+}
+
+.contact-link {
+  color: var(--gold);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+
+@media(max-width: 750px) {
+  .nav {
+    padding: 15px 0;
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero { padding: 65px 0; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .hero p { margin: auto; }
+
+  .buttons { justify-content: center; }
+
+  .profile-frame {
+    max-width: 250px;
+    grid-row: 1;
+  }
+
+  .grid, .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section { padding: 60px 0; }
+}
+
+@media print {
+  header, .buttons { display: none; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">HMC SECUREX</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">WELCOME TO MY PROFESSIONAL PORTFOLIO</div>
+
+      <h1>HARIGOVIND<br><span class="gold">C M</span></h1>
+
+      <h3>IT Professional | Technical Support | Cybersecurity</h3>
+
+      <p>
+        A dedicated and adaptable professional with a background in
+        Information Technology, cybersecurity, technical support and
+        administration. Passionate about technology, continuous
+        learning, problem-solving and professional growth.
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#experience">Explore My Journey</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="profile-frame">
+      <img src="assets/profile.jpeg"
+           alt="Professional portrait of Harigovind C M">
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">INTRODUCTION</div>
+    <h2 class="section-title">About <span class="gold">Me</span></h2>
+
+    <p class="about-text">
+      I am Harigovind C M, a Bachelor of Computer Applications graduate
+      with professional experience in technical support, ELV system
+      programming and administration.
+
+      <br><br>
+
+      I have developed practical knowledge in IT operations, software
+      configuration, troubleshooting, infrastructure support and
+      cybersecurity fundamentals.
+
+      <br><br>
+
+      I consider myself hardworking, responsible, adaptable and
+      committed to continuous improvement. I believe that dedication,
+      teamwork and a willingness to learn are essential to success.
+      My goal is to contribute positively to an organisation while
+      building a strong and meaningful professional future.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">MY PROFESSIONAL JOURNEY</div>
+    <h2 class="section-title">Work <span class="gold">Experience</span></h2>
+
+    <div class="grid">
+
+      <article class="card">
+        <h3>ELV System Programmer</h3>
+        <p class="company">Benjamin Technical Services LLC – Dubai</p>
+        <p class="date">January 2026 – August 2026</p>
+        <ul>
+          <li>Programmed and configured CCTV and intercom systems.</li>
+          <li>Configured related software and system applications.</li>
+          <li>Assisted with system setup and technical troubleshooting.</li>
+          <li>Supported maintenance and smooth operation of ELV systems.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Support Specialist</h3>
+        <p class="company">Finmart LLC – Dubai</p>
+        <p class="date">May 2025 – December 2025</p>
+        <ul>
+          <li>Provided technical support for hardware and software.</li>
+          <li>Installed and configured computer systems and applications.</li>
+          <li>Assisted with server installation and configuration.</li>
+          <li>Resolved technical issues and maintained support records.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Administration Officer</h3>
+        <p class="company">Meera Tech Contracting – Sharjah</p>
+        <p class="date">December 2024 – June 2025</p>
+        <ul>
+          <li>Managed daily administrative operations.</li>
+          <li>Maintained company records and documentation.</li>
+          <li>Coordinated with clients, suppliers and subcontractors.</li>
+          <li>Prepared quotations, reports and business documents.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-label">ACADEMIC BACKGROUND</div>
+    <h2 class="section-title">Education & <span class="gold">Qualifications</span></h2>
+
+    <div class="education">
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p class="about-text">
+        Maharaja Agrasen Himalayan Garhwal University
+      </p>
+      <p class="gold">2020 – 2023</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label">WHAT I BRING</div>
+    <h2 class="section-title">My <span class="gold">Skill Set</span></h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <h3>IT & Technical</h3>
+        <span class="tag">IT Support</span>
+        <span class="tag">Hardware Troubleshooting</span>
+        <span class="tag">Software Configuration</span>
+        <span class="tag">Server Installation</span>
+        <span class="tag">System Maintenance</span>
+        <span class="tag">Networking Fundamentals</span>
+        <span class="tag">Programming</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Cybersecurity</h3>
+        <span class="tag">Kali Linux</span>
+        <span class="tag">Vulnerability Assessment</span>
+        <span class="tag">Burp Suite</span>
+        <span class="tag">Splunk</span>
+        <span class="tag">Web Application Security</span>
+        <span class="tag">Security Fundamentals</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>ELV Systems</h3>
+        <span class="tag">CCTV Configuration</span>
+        <span class="tag">Intercom Systems</span>
+        <span class="tag">Software Programming</span>
+        <span class="tag">System Troubleshooting</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Administration</h3>
+        <span class="tag">Office Operations</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Customer Support</span>
+        <span class="tag">Coordination</span>
+        <span class="tag">Reporting</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Professional Skills</h3>
+        <span class="tag">Problem-Solving</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Teamwork</span>
+        <span class="tag">Time Management</span>
+        <span class="tag">Adaptability</span>
+        <span class="tag">Quick Learning</span>
+      </div>
+
+      <div class="skill-card">
+        <h3>Languages</h3>
+        <span class="tag">English</span>
+        <span class="tag">Hindi</span>
+        <span class="tag">Malayalam</span>
+        <span class="tag">Tamil</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-label">PROFESSIONAL DEVELOPMENT</div>
+    <h2 class="section-title">Licenses & <span class="gold">Certifications</span></h2>
+
+    <div class="grid">
+
+      <div class="cert-card">
+        <h3>Certified Ethical Hacker (CEH)</h3>
+        <p>Cybersecurity certification.</p>
+        <p>Certificate image can be added when uploaded.</p>
+      </div>
+
+      <div class="cert-card">
+        <h3>Certified IT Infrastructure & Cyber SOC Analyst</h3>
+        <p>RedTeam Hacker Academy – CICSA v3</p>
+        <p>Certificate issued: 02 June 2024</p>
+        <img src="assets/cicsa.jpeg"
+             alt="Harigovind C M CICSA certificate">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container contact-box">
+
+    <div class="section-label">GET IN TOUCH</div>
+    <h2 class="section-title">Let's <span class="gold">Connect</span></h2>
+
+    <p>
+      I am open to new opportunities, professional challenges and
+      meaningful collaborations. I look forward to contributing my
+      skills and growing together with a great organisation.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a class="contact-link"
+         href="mailto:Harigovindcmanoj450@gmail.com">
+        Harigovindcmanoj450@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <a class="contact-link" href="tel:+918075799628">
+        +91 8075799628
+      </a>
+    </p>
+
+    <p>
+      <strong>WhatsApp:</strong>
+      <a class="contact-link"
+         href="https://wa.me/918075799628">
+        Send me a message
+      </a>
+    </p>
+
+    <p><strong>Location:</strong> Thrissur, Kerala, India</p>
+
+    <div class="buttons" style="justify-content:center">
+      <a class="btn primary"
+         href="mailto:Harigovindcmanoj450@gmail.com">
+        Email Me
+      </a>
+      <a class="btn" href="tel:+918075799628">
+        Call Me
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Harigovind C M. All Rights Reserved.
+  <br>
+  Professional Portfolio
+</footer>
+
+</body>
+</html>
